@@ -1,0 +1,17 @@
+# Based on Tai's et al. paper "A Standard Cell ......"
+
+-MemCellType: eDRAM
+
+-CellArea (F^2): 14
+-CellAspectRatio: 7
+
+-ReadMode: voltage
+
+-AccessType: CMOS
+-AccessCMOSWidth (F): 1.31
+
+-DRAMCellCapacitance (F): 18e-15
+-ResetVoltage (V): vdd
+-SetVoltage (V): vdd
+
+-MinSenseVoltage (mV): 10
