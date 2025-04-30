@@ -1,38 +1,15 @@
 -MemCellType: eDRAM
 
-# Based on: Giterman et al., "A 1-Mbit Fully Logic-Compatible 3T Gain-Cell Embedded DRAM in 16-nm FinFET", 2020
+-CellArea (F^2): 33.1
+-CellAspectRatio: 2.39
 
-# Technology and Geometry
--ProcessNode: 16
--CellArea (F^2): 80      # Estimated from ~2x8 pitch = ~0.08 µm² assuming 16 nm feature size (~5 nm F)
--CellAspectRatio: 0.25   # Very flat cell: height ≈ 2 tracks, width ≈ 8 fins
-
-# Read Mode
 -ReadMode: voltage
 
-# Access Structure (logic-compatible, no special devices beyond VT)
 -AccessType: CMOS
--AccessCMOSWidth (F): 1  # Assume minimum-width FinFET (~1 fin per device)
+-AccessCMOSWidth (F): 1.31
 
-# Capacitance and Voltages
--DRAMCellCapacitance (F): 0.7e-15      # Approximated SN capacitance (gate + junction)
--ResetVoltage (V): 0.6                 # VDD during standby
--SetVoltage (V): 0.9                   # Boosted WBL during write to ensure full swing
+-DRAMCellCapacitance (F): 18e-15
+-ResetVoltage (V): vdd
+-SetVoltage (V): vdd
 
-# Sense Characteristics
--MinSenseVoltage (mV): 150             # Bitline swing needed for sensing via inverter
-
-# Retention Characteristics
--RetentionTime (us): 77              # 77 µs at 27°C (silicon measurement)
--Temperature (K): 300
--OptimizationTarget: WriteEDP
-
-# Leakage Info
--OffCurrent (A): 2e-11                 # ~20 pA leakage per bit at VDD = 0.6 V
-
-# Notes on Biases (not part of standard format, but for reference)
-# - WWL is biased to -0.15 V in standby for leakage suppression
-# - Read Wordline (RWL) transitions from VDD to 0 V to enable PMOS
-# - Write Bitline (WBL) driven to 0.9 V to write ‘1’, 0 V to write ‘0’
-
-
+-MinSenseVoltage (mV): 10
