@@ -1,0 +1,19 @@
+-MemCellType: eDRAM
+
+-CellArea (F^2): 201
+//table 1
+-CellAspectRatio: 1.64 
+// 0.51um / 0.31um from paper
+
+-ReadMode: voltage
+
+-AccessType: CMOS
+-AccessCMOSWidth (F): 3.22
+//approximate from the layout view in paper
+
+-DRAMCellCapacitance (F): 97e-18
+// table 1
+-ResetVoltage (V): vdd
+-SetVoltage (V): vdd
+
+-MinSenseVoltage (mV): 10
